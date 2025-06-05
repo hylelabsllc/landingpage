@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M20 8H100V32H20V8Z" fill="#4F46E5" fill-opacity="0.1"/>
-  <text x="60" y="25" text-anchor="middle" fill="#4F46E5" font-family="Arial" font-size="14" font-weight="bold">Company 4</text>
+  <path d="M24 16C24 12.6863 26.6863 10 30 10C33.3137 10 36 12.6863 36 16C36 19.3137 33.3137 22 30 22H18C15.7909 22 14 20.2091 14 18C14 15.7909 15.7909 14 18 14C20.2091 14 22 15.7909 22 18" stroke="#3B82F6" stroke-width="2"/>
+  <path d="M30 16C30 13.7909 31.7909 12 34 12C36.2091 12 38 13.7909 38 16C38 18.2091 36.2091 20 34 20H26" stroke="#3B82F6" stroke-width="2"/>
+  <text x="40" y="25" font-family="Arial" font-size="16" font-weight="bold" fill="#1F2937">CloudSync</text>
 </svg> 
