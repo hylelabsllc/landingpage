@@ -11,8 +11,9 @@ const WorldAnimation = dynamic(() => import('./components/WorldAnimation'), {
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-white to-gray-50">
       <BrowserTitle />
+      <WorldAnimation />
       
       {/* Navigation */}
       <nav className="fixed w-full bg-white/80 backdrop-blur-sm z-50 border-b border-gray-100">
@@ -49,11 +50,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-
-        </div>
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center animate-fade-in">
             <div className="inline-block mb-6 px-4 py-2 rounded-full bg-primary-50 text-primary-600 font-semibold text-sm">
@@ -96,19 +93,19 @@ export default function Home() {
               </Link>
             </div>
             <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
+              <div className="text-center transform hover:scale-105 transition-transform duration-200">
                 <div className="text-3xl font-bold text-primary-600 mb-2">3x</div>
                 <div className="text-sm text-gray-600">Average Revenue Growth</div>
               </div>
-              <div className="text-center">
+              <div className="text-center transform hover:scale-105 transition-transform duration-200">
                 <div className="text-3xl font-bold text-primary-600 mb-2">40%</div>
                 <div className="text-sm text-gray-600">Higher Conversion Rates</div>
               </div>
-              <div className="text-center">
+              <div className="text-center transform hover:scale-105 transition-transform duration-200">
                 <div className="text-3xl font-bold text-primary-600 mb-2">99.9%</div>
                 <div className="text-sm text-gray-600">Platform Uptime</div>
               </div>
-              <div className="text-center">
+              <div className="text-center transform hover:scale-105 transition-transform duration-200">
                 <div className="text-3xl font-bold text-primary-600 mb-2">24/7</div>
                 <div className="text-sm text-gray-600">Expert Support</div>
               </div>
