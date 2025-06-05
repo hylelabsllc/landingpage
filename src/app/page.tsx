@@ -5,8 +5,9 @@ import BrowserTitle from "./components/BrowserTitle";
 import CountdownTimer from "./components/CountdownTimer";
 import dynamic from 'next/dynamic';
 
-const WorldAnimation = dynamic(() => import('./components/WorldAnimation'), {
+const WorldAnimation = dynamic(() => import('@/app/components/WorldAnimation'), {
   ssr: false,
+  loading: () => <div className="fixed inset-0 z-0 opacity-40 bg-gradient-to-b from-white to-gray-50" />
 });
 
 export default function Home() {
@@ -93,30 +94,62 @@ export default function Home() {
               </Link>
             </div>
             <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="text-center transform hover:scale-105 transition-transform duration-200">
-                <div className="text-3xl font-bold text-primary-600 mb-2">3x</div>
-                <div className="text-sm text-gray-600">Average Revenue Growth</div>
+              <div className="text-center transform hover:scale-105 transition-transform duration-200 relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 to-primary-400/20 rounded-xl backdrop-blur-sm group-hover:from-primary-600/30 group-hover:to-primary-400/30 transition-all duration-300 shadow-lg"></div>
+                <div className="relative z-10 p-6">
+                  <div className="text-3xl font-bold text-primary-700 mb-2">3x</div>
+                  <div className="text-sm text-gray-700">Average Revenue Growth</div>
+                </div>
               </div>
-              <div className="text-center transform hover:scale-105 transition-transform duration-200">
-                <div className="text-3xl font-bold text-primary-600 mb-2">40%</div>
-                <div className="text-sm text-gray-600">Higher Conversion Rates</div>
+              <div className="text-center transform hover:scale-105 transition-transform duration-200 relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 to-primary-400/20 rounded-xl backdrop-blur-sm group-hover:from-primary-600/30 group-hover:to-primary-400/30 transition-all duration-300 shadow-lg"></div>
+                <div className="relative z-10 p-6">
+                  <div className="text-3xl font-bold text-primary-700 mb-2">40%</div>
+                  <div className="text-sm text-gray-700">Higher Conversion Rates</div>
+                </div>
               </div>
-              <div className="text-center transform hover:scale-105 transition-transform duration-200">
-                <div className="text-3xl font-bold text-primary-600 mb-2">99.9%</div>
-                <div className="text-sm text-gray-600">Platform Uptime</div>
+              <div className="text-center transform hover:scale-105 transition-transform duration-200 relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 to-primary-400/20 rounded-xl backdrop-blur-sm group-hover:from-primary-600/30 group-hover:to-primary-400/30 transition-all duration-300 shadow-lg"></div>
+                <div className="relative z-10 p-6">
+                  <div className="text-3xl font-bold text-primary-700 mb-2">99.9%</div>
+                  <div className="text-sm text-gray-700">Platform Uptime</div>
+                </div>
               </div>
-              <div className="text-center transform hover:scale-105 transition-transform duration-200">
-                <div className="text-3xl font-bold text-primary-600 mb-2">24/7</div>
-                <div className="text-sm text-gray-600">Expert Support</div>
+              <div className="text-center transform hover:scale-105 transition-transform duration-200 relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 to-primary-400/20 rounded-xl backdrop-blur-sm group-hover:from-primary-600/30 group-hover:to-primary-400/30 transition-all duration-300 shadow-lg"></div>
+                <div className="relative z-10 p-6">
+                  <div className="text-3xl font-bold text-primary-700 mb-2">24/7</div>
+                  <div className="text-sm text-gray-700">Expert Support</div>
+                </div>
               </div>
             </div>
             <div className="mt-16">
-              <p className="text-sm text-gray-500 mb-4">TRUSTED BY LEADING COMPANIES</p>
-              <div className="flex flex-wrap justify-center items-center gap-8 opacity-75">
-                <Image src="/images/company1.svg" alt="Company 1" width={120} height={40} className="h-8 w-auto" />
-                <Image src="/images/company2.svg" alt="Company 2" width={120} height={40} className="h-8 w-auto" />
-                <Image src="/images/company3.svg" alt="Company 3" width={120} height={40} className="h-8 w-auto" />
-                <Image src="/images/company4.svg" alt="Company 4" width={120} height={40} className="h-8 w-auto" />
+              <p className="text-sm text-gray-600 mb-4 font-medium">TRUSTED BY LEADING COMPANIES</p>
+              <div className="flex flex-wrap justify-center items-center gap-8">
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-600/15 to-primary-400/15 rounded-xl backdrop-blur-sm group-hover:from-primary-600/25 group-hover:to-primary-400/25 transition-all duration-300 shadow-md"></div>
+                  <div className="relative z-10 p-4">
+                    <Image src="/images/company1.svg" alt="Company 1" width={120} height={40} className="h-8 w-auto" />
+                  </div>
+                </div>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-600/15 to-primary-400/15 rounded-xl backdrop-blur-sm group-hover:from-primary-600/25 group-hover:to-primary-400/25 transition-all duration-300 shadow-md"></div>
+                  <div className="relative z-10 p-4">
+                    <Image src="/images/company2.svg" alt="Company 2" width={120} height={40} className="h-8 w-auto" />
+                  </div>
+                </div>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-600/15 to-primary-400/15 rounded-xl backdrop-blur-sm group-hover:from-primary-600/25 group-hover:to-primary-400/25 transition-all duration-300 shadow-md"></div>
+                  <div className="relative z-10 p-4">
+                    <Image src="/images/company3.svg" alt="Company 3" width={120} height={40} className="h-8 w-auto" />
+                  </div>
+                </div>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-600/15 to-primary-400/15 rounded-xl backdrop-blur-sm group-hover:from-primary-600/25 group-hover:to-primary-400/25 transition-all duration-300 shadow-md"></div>
+                  <div className="relative z-10 p-4">
+                    <Image src="/images/company4.svg" alt="Company 4" width={120} height={40} className="h-8 w-auto" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -136,15 +169,16 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-transform duration-200">
-              <div className="h-48 bg-gradient-to-br from-primary-100 to-primary-50 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
+              <div className="h-48 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
                 <Image
-                  src="/images/neosbuy-bg.svg"
+                  src="/images/neosbuy-bg.jpg"
                   alt="NeosBuy Background"
                   fill
-                  className="object-cover opacity-20"
+                  className="object-cover"
                   priority
                 />
-                <h3 className="text-3xl font-bold text-primary-600 relative z-10">NeosBuy</h3>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/90 to-primary-400/90 mix-blend-multiply"></div>
+                <h3 className="text-3xl font-bold text-white relative z-10">NeosBuy</h3>
               </div>
               <h3 className="text-2xl font-semibold mb-4">NeosBuy</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
@@ -178,15 +212,16 @@ export default function Home() {
               </Link>
             </div>
             <div className="bg-white rounded-2xl shadow-xl p-8 transform hover:scale-105 transition-transform duration-200">
-              <div className="h-48 bg-gradient-to-br from-primary-100 to-primary-50 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
+              <div className="h-48 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden">
                 <Image
-                  src="/images/resumecrafter-bg.svg"
+                  src="/images/resumecrafter-bg.jpg"
                   alt="ResumeCrafter Background"
                   fill
-                  className="object-cover opacity-20"
+                  className="object-cover"
                   priority
                 />
-                <h3 className="text-3xl font-bold text-primary-600 relative z-10">ResumeCrafter</h3>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/90 to-primary-400/90 mix-blend-multiply"></div>
+                <h3 className="text-3xl font-bold text-white relative z-10">ResumeCrafter</h3>
               </div>
               <h3 className="text-2xl font-semibold mb-4">ResumeCrafter</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
