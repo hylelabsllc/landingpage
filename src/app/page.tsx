@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import AnimatedText from "./components/AnimatedText";
 import BrowserTitle from "./components/BrowserTitle";
-import FunnelText from "./components/FunnelText";
 import CountdownTimer from "./components/CountdownTimer";
 
 export default function Home() {
