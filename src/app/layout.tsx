@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from 'next/font/local';
+import Providers from "@/components/Providers";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// Use local font instead of Google Fonts
+const inter = localFont({
+  src: '../fonts/Inter-Regular.woff2',
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   title: "Hyle Labs LLC - Innovative Software Solutions",
@@ -15,11 +20,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <main className="min-h-screen bg-white">
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.variable} font-sans`}>
+        <Providers>
           {children}
-        </main>
+        </Providers>
       </body>
     </html>
   );

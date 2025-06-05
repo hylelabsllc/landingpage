@@ -28,12 +28,17 @@ export default function Home() {
                 </h1>
               </Link>
             </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-center space-x-8">
-                <Link href="#about" className="text-gray-700 hover:text-primary-600 transition-colors duration-200 px-3 py-2">About</Link>
-                <Link href="#products" className="text-gray-700 hover:text-primary-600 transition-colors duration-200 px-3 py-2">Products</Link>
-                <Link href="#contact" className="text-gray-700 hover:text-primary-600 transition-colors duration-200 px-3 py-2">Contact</Link>
+            <div className="hidden md:flex items-center space-x-8">
+              <div className="bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg animate-pulse flex items-center space-x-3">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Limited Time Offer</span>
+                <CountdownTimer />
               </div>
+              <Link href="#about" className="text-gray-700 hover:text-primary-600 transition-colors duration-200 px-3 py-2">About</Link>
+              <Link href="#products" className="text-gray-700 hover:text-primary-600 transition-colors duration-200 px-3 py-2">Products</Link>
+              <Link href="#contact" className="text-gray-700 hover:text-primary-600 transition-colors duration-200 px-3 py-2">Contact</Link>
             </div>
           </div>
         </div>
@@ -63,26 +68,15 @@ export default function Home() {
               Don't miss out on the AI revolution. Join the elite group of businesses that are scaling their operations with our innovative solutions.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <div className="relative">
-                <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg animate-pulse whitespace-nowrap">
-                  <div className="flex items-center space-x-2">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <span>Limited Time Offer</span>
-                    <CountdownTimer />
-                  </div>
-                </div>
-                <Link href="#contact" className="bg-primary-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-700 transition-colors duration-200 shadow-lg hover:shadow-xl text-center flex items-center justify-center relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <span className="relative z-10 flex items-center">
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                    Start Growing Today
-                  </span>
-                </Link>
-              </div>
+              <Link href="#contact" className="bg-primary-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-700 transition-colors duration-200 shadow-lg hover:shadow-xl text-center flex items-center justify-center relative overflow-hidden group">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <span className="relative z-10 flex items-center">
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                  Start Growing Today
+                </span>
+              </Link>
               <Link href="#products" className="bg-white text-primary-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-colors duration-200 shadow-lg hover:shadow-xl border border-primary-200 text-center flex items-center justify-center group">
                 <span className="relative z-10 flex items-center">
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
